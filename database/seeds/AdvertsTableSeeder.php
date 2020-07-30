@@ -15,11 +15,11 @@ class AdvertsTableSeeder extends Seeder
             'advert_types_id' => \App\AdvertTypes::FOOTER_ADVERT,
             'title' => 'Footer ads',
             'link' =>  '#',
-            'file_hash' => '2SrDbm4aCEnRO0VQcIWfy40wErfBX9rHgal3474j/3502584.jpg',//path
-            'file_name' => '3502584.jpg',
-            'file_ext' =>'jpg',
-            'file_mime' =>  'image/jpeg',
-            'file_size' =>  '',
+            'file_hash' => '2SrDbm4aCEnRO0VQcIWfy40wErfBX9rHgal3474j/3502584.png',//path
+            'file_name' => '3502584.png',
+            'file_ext' =>'png',
+            'file_mime' =>  'image/png',
+            'file_size' =>  null,
         ]);
 
 
@@ -27,16 +27,16 @@ class AdvertsTableSeeder extends Seeder
             'advert_types_id' => \App\AdvertTypes::HEADER_ADVERT,
             'title' => 'Header ads',
             'link' =>  '#',
-            'file_hash' => '2SrDbm4aCEnRO0VQcIWfy40wErfBX9rHgal3474j/755121.jpg',//path
-            'file_name' => '755121.jpg',
-            'file_ext' =>'jpg',
-            'file_mime' =>  'image/jpeg',
-            'file_size' =>  '',
+            'file_hash' => '2SrDbm4aCEnRO0VQcIWfy40wErfBX9rHgal3474j/755121.png',//path
+            'file_name' => '755121.png',
+            'file_ext' =>'png',
+            'file_mime' =>  'image/png',
+            'file_size' =>  null,
         ]);
 
 
 
-        for($i=0;$i>10;$i++){
+        for($i=0;$i<=10;$i++){
             DB::table('adverts')->insert([
                 'advert_types_id' => \App\AdvertTypes::MAIN_BLOCK_ADVERT,
                 'title' => 'main block ads',
@@ -45,21 +45,41 @@ class AdvertsTableSeeder extends Seeder
                 'file_name' => '4173986.png',
                 'file_ext' =>'png',
                 'file_mime' =>  'image/png',
-                'file_size' =>  '',
+                'file_size' =>  null,
             ]);
-        }
-
-        for($i=0;$i>10;$i++){
             DB::table('adverts')->insert([
                 'advert_types_id' => \App\AdvertTypes::MAIN_BLOCK_ADVERT,
                 'title' => 'main block ads',
                 'link' =>  '#',
-                'file_hash' => '2SrDbm4aCEnRO0VQcIWfy40wErfBX9rHgal3474j/1020998.jpg',//path
-                'file_name' => '1020998.jpg',
+                'file_hash' => '2SrDbm4aCEnRO0VQcIWfy40wErfBX9rHgal3474j/3605279.png',//path
+                'file_name' => '3605279.png',
                 'file_ext' =>'png',
-                'file_mime' =>  'image/jpeg',
-                'file_size' =>  '',
+                'file_mime' =>  'image/png',
+                'file_size' =>  null,
             ]);
+
+            DB::table('adverts')->insert([
+                'advert_types_id' => \App\AdvertTypes::MAIN_BLOCK_ADVERT,
+                'title' => 'main block ads',
+                'link' =>  '#',
+                'file_hash' => '2SrDbm4aCEnRO0VQcIWfy40wErfBX9rHgal3474j/1020998.png',//path
+                'file_name' => '1020998.png',
+                'file_ext' =>'png',
+                'file_mime' =>  'image/png',
+                'file_size' =>  null,
+            ]);
+
+            DB::table('adverts')->insert([
+                'advert_types_id' => \App\AdvertTypes::MAIN_BLOCK_ADVERT,
+                'title' => 'main block ads',
+                'link' =>  '#',
+                'file_hash' => '2SrDbm4aCEnRO0VQcIWfy40wErfBX9rHgal3474j/6371637.png',//path
+                'file_name' => '1020998.png',
+                'file_ext' =>'png',
+                'file_mime' =>  'image/png',
+                'file_size' =>  null,
+            ]);
+
         }
 
 

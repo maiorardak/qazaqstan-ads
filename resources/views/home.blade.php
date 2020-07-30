@@ -81,6 +81,7 @@
     <link rel='stylesheet' id='tonsberg-style-css'  href='{{asset('tonsberg/css/styles.css')}}' type='text/css' media='all' />
     <link rel='stylesheet' id='tonsberg-mt-style-css'  href='{{asset('tonsberg-child/style.css')}}' type='text/css' media='all' />
     <link rel='stylesheet' id='tonsberg-mt-style-css'  href='{{asset('css/gallery.css')}}' type='text/css' media='all' />
+    <link rel='stylesheet' id='tonsberg-mt-style-css'  href='{{asset('css/seamless.css')}}' type='text/css' media='all' />
     <style id='tonsberg-mt-style-inline-css' type='text/css'>
         body .tonsberg_preloader_holder{
             background-color: #ffffff;
@@ -840,21 +841,34 @@
                     <article id="post-15" class="post-15 page type-page status-publish hentry">
 
                         <div class="entry-content mt-lg-3" >
-                            <div class="gallery" id="gallery">
+                            {{--<div class="gallery" id="gallery">--}}
 
+                                {{--@foreach($adverts as $advert)--}}
+                                    {{--<div class="pics animation all 2" style="margin-bottom:3px;">--}}
+                                        {{--<a href="{{$advert->link}}">--}}
+                                            {{--<img class="img-fluid"--}}
+                                                 {{--src="{{asset('upload/'.$advert->file_hash)}}"--}}
+                                                 {{--alt="{{$advert->title}}">--}}
+                                        {{--</a>--}}
+
+                                    {{--</div>--}}
+
+                                {{--@endforeach--}}
+
+                            {{--</div>--}}
+
+                            <hr>
+                            <section id="photos">
                                 @foreach($adverts as $advert)
-                                    <div class="mb-3 pics animation">
-                                        <a href="{{$advert->link}}">
-                                            <img class="img-fluid"
-                                                 src="{{asset('upload/'.$advert->file_hash)}}"
-                                                 alt="{{$advert->title}}">
-                                        </a>
 
-                                    </div>
-
+                                    <a href="{{$advert->link}}">
+                                        <img class="img-fluid"
+                                             style="border:1px solid #fff;"
+                                             src="{{asset('upload/'.$advert->file_hash)}}"
+                                             alt="{{$advert->title}}">
+                                    </a>
                                 @endforeach
-
-                            </div>
+                            </section>
 
 
 
@@ -1001,6 +1015,7 @@
 
 </script>
 <script type='text/javascript' src='{{asset('js/gallery.js')}}'></script>
+<script type='text/javascript' src='{{asset('js/seamless.js')}}'></script>
 
 
 <script type='text/javascript' src='{{asset('tonsberg/js/modernizr.custom.js')}}'></script>
