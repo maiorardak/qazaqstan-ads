@@ -642,7 +642,7 @@
 
                     <!-- RIGHT SIDE HOLDER -->
                     <div class="col-md-9 social-links-column">
-                        <div class="add-banner-header">
+                        <div class="add-banner-header" style="background-color: #000;">
                             <a href="@if($header_advert) {{$header_advert->link}} @else {{'#'}} @endif" target="_blank">
                                 @if($header_advert)
 
@@ -784,7 +784,8 @@
                     <div class="col-md-12 footer-row-1">
                         <div class="row"><div class="col-md-12 sidebar-1">
                                 <aside id="custom_html-6" class="widget_text widget vc_column_vc_container widget_custom_html">
-                                    <div class="textwidget custom-html-widget"><div style="text-align:center">
+                                    <div class="textwidget custom-html-widget">
+                                        <div style="text-align:center;background-color: #000">
                                             <a href="@if($footer_advert) {{$footer_advert->link}} @else {{'#'}} @endif" target="_blank">
 
                                                 @if($footer_advert)
@@ -803,7 +804,11 @@
 
 
                                             </a>
-                                        </div></div></aside></div></div></div></div>
+                                        </div>
+                                    </div>
+                                </aside>
+                            </div>
+                        </div></div></div>
                 <div class="row"><div class="col-md-12 footer-row-2"><div class="row"></div></div></div>
 
             </div>
