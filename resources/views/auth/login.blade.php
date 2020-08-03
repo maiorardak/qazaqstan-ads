@@ -32,11 +32,11 @@
 
         <!-- Remind Passowrd -->
         <div id="formFooter">
-            @if (Route::has('password.request'))
-                <a class="underlineHover"  href="{{ route('password.request') }}">
-                    Забыли пароль?
-                </a>
-            @endif
+            {{--@if (Route::has('password.request'))--}}
+                {{--<a class="underlineHover"  href="{{ route('password.request') }}">--}}
+                    {{--Забыли пароль?--}}
+                {{--</a>--}}
+            {{--@endif--}}
 
         </div>
 

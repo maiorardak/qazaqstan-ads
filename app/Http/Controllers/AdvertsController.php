@@ -43,7 +43,7 @@ class AdvertsController extends Controller
     public function store(Request $request)
     {
         DB::beginTransaction();
-        $file=$request->file('image');
+        $file=$request->file('file');
         $file_original_name=$file->getClientOriginalName();
         $name_exp = explode('.',$file_original_name);
         $file_ext = array_pop($name_exp);
@@ -146,29 +146,23 @@ class AdvertsController extends Controller
     public function ajax(Request $request)
     {
 
-        $pagination = collect($request->get('pagination'));
-        $query = collect($request->get('query'));
-        $sort = collect($request->get('sort'));
-        $field = $sort->get('field');
 
-        $adverts = Adverts::orderBy($field ?? 'id', $sort->get('sort') ?? 'DESC');
+        $adverts = Adverts::orderBy('id', 'DESC');
         $adverts=$adverts->whereNull('deleted_at');
         $adverts=$adverts->with(['type']);
-        $adverts = $adverts->paginate($pagination->get('perpage'), ['*'], 'page', $pagination->get('page'));
+        $adverts = $adverts->paginate($request->get('length'), ['adverts.*'], 'page', $request->get('draw'));
 
-        $meta = [
-            'page' => $adverts->currentPage(),
-            'pages' => $adverts->lastPage(),
-            'perpage' => (int)$adverts->perPage(),
-            'total' => $adverts->total(),
-            'sort' => $sort->get('sort'),
-            'field' => $sort->get('field')
-        ];
 
         return response()->json([
-            'meta' => $meta,
+            'draw' =>  $request->get('draw'),
+            'page' => $adverts->lastPage(),
+            'length' => (int)$adverts->perPage(),
+            'recordsTotal' => $adverts->total(),
+            'recordsFiltered' => $adverts->total(),
             'data' => $adverts->items()
         ]);
+
+
     }
 
 

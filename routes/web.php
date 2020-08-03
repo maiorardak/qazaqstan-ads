@@ -18,6 +18,7 @@ Route::get('register', function(){
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/about', 'HomeController@about')->name('about');
+Route::get('/contact-form', 'HomeController@contactForm')->name('contact-form');
 
 
 // ---- Adverts Routes ---- //

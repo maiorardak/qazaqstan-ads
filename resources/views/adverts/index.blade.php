@@ -18,9 +18,13 @@
 
 @push('scripts')
     <script>
-        $('#datatable-adverts').DataTable({
+        var table=$('#datatable-adverts').DataTable({
             responsive: true,
             searching:false,
+            lengthChange:false,
+            pageLength: 50,
+            processing: true,
+            serverSide: true,
             language:{
                 "decimal":        "",
                 "emptyTable":     "Данные отсутствуют",
@@ -51,6 +55,7 @@
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'
                 },
+
             },
             columns:[
                 {data: "id",
@@ -62,7 +67,13 @@
                 {data:function (raw) {
                     var src="{{asset('upload/')}}";
                         src+='/'+raw.file_hash;
-                        return '<img src="'+src+'" width="100px"/>';
+
+                        if(jQuery.inArray(raw.file_ext, ['jpg','jpeg','png','bmp']) !== -1){
+                            return '<img src="'+src+'" width="100px"/>';
+                        }
+                        return '<video controls  width="360" height="150"> <source src="'+src+'" ></video>';
+
+
                     },
                     title:'Файл'},
                 {
@@ -75,7 +86,11 @@
                 },
                 {
                     data:function(raw){
-                        return "<a class='btn text-primary' href='/adverts/image-crop/"+raw.id+"' title='Отредактировать изображение'><i class='fa fa-scissors'></i></a>";
+                        if(jQuery.inArray(raw.file_ext, ['jpg','jpeg','png','bmp']) !== -1){
+                            return "<a class='btn text-primary' href='/adverts/image-crop/"+raw.id+"' title='Отредактировать изображение'><i class='fa fa-scissors'></i></a>";
+
+                        }
+                        return '';
                     },
 
                 }
@@ -83,8 +98,6 @@
 
             ],
         });
-
-
 
     </script>
 @endpush

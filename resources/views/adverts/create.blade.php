@@ -37,7 +37,7 @@
                            </div>
                        <div class="col-md-12"><br></div>
                        <div class="col-md-6">
-                           <input type="file" class="" id="input" name="image" accept="image/*">
+                           <input type="file" class="" id="input" name="file">
 
 
                        </div>

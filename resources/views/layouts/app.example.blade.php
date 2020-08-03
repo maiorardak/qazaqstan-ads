@@ -10,44 +10,78 @@
     <link rel="shortcut icon" href="{{ asset('tonsberg/images/favicon.png') }}">
 
     <title>{{ config('app.name', 'Qazaqstan ADS') }}</title>
+    <script>
+        /* You can add more configuration options to webfontloader by previously defining the WebFontConfig with your options */
+        if ( typeof WebFontConfig === "undefined" ) {
+            WebFontConfig = new Object();
+        }
+        WebFontConfig['google'] = {families: ['Montserrat', 'Libre+Baskerville']};
 
-
-    <script src="https://kit.fontawesome.com/5d5a092e04.js" crossorigin="anonymous"></script>
-
-
-    <link rel='stylesheet' id='tonsberg-mt-style-css'  href='{{asset('css/gallery.css')}}' type='text/css' media='all' />
-    <link rel='stylesheet' id='tonsberg-mt-style-css'  href='{{asset('css/seamless.css')}}' type='text/css' media='all' />
+        (function() {
+            var wf = document.createElement( 'script' );
+            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName( 'script' )[0];
+            s.parentNode.insertBefore( wf, s );
+        })();
+    </script>
+    {{--<link rel='dns-prefetch' href='//fonts.googleapis.com' />--}}
+    {{--<link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />--}}
+    {{--<link rel='dns-prefetch' href='//s.w.org' />--}}
+    {{--<link rel="alternate" type="application/rss+xml" title="Tonsberg &raquo; Feed" href="https://tonsberg.modeltheme.com/feed/" />--}}
+    {{--<link rel="alternate" type="application/rss+xml" title="Tonsberg &raquo; Comments Feed" href="https://tonsberg.modeltheme.com/comments/feed/" />--}}
+    <script type="text/javascript">
+        window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/tonsberg.modeltheme.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.0.10"}};
+        !function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' id='wp-block-library-css'  href='https://tonsberg.modeltheme.com/wp-includes/css/dist/block-library/style.min.css?ver=5.0.10' type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-block-library-theme-css'  href='https://tonsberg.modeltheme.com/wp-includes/css/dist/block-library/theme.min.css?ver=5.0.10' type='text/css' media='all' />
+    <link rel='stylesheet' id='contact-form-7-css'  href='https://tonsberg.modeltheme.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='essential-grid-plugin-settings-css'  href='https://tonsberg.modeltheme.com/wp-content/plugins/essential-gridzip/public/assets/css/settings.css?ver=2.3.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='tp-open-sans-css'  href='https://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%2C700%2C800&#038;ver=5.0.10' type='text/css' media='all' />
+    <link rel='stylesheet' id='tp-raleway-css'  href='https://fonts.googleapis.com/css?family=Raleway%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900&#038;ver=5.0.10' type='text/css' media='all' />
+    <link rel='stylesheet' id='tp-droid-serif-css'  href='https://fonts.googleapis.com/css?family=Droid+Serif%3A400%2C700&#038;ver=5.0.10' type='text/css' media='all' />
+    <link rel='stylesheet' id='tp-barlow-condensed-css'  href='https://fonts.googleapis.com/css?family=Barlow+Condensed%3A100%2C200%2C300%2C400%2C500%2C600%2C700&#038;ver=5.0.10' type='text/css' media='all' />
+    <link rel='stylesheet' id='tp-source-code-pro-css'  href='https://fonts.googleapis.com/css?family=Source+Code+Pro%3A300%2C400%2C500%2C600%2C700&#038;ver=5.0.10' type='text/css' media='all' />
+    <link rel='stylesheet' id='tp-montserrat-css'  href='https://fonts.googleapis.com/css?family=Montserrat%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900&#038;ver=5.0.10' type='text/css' media='all' />
+    <link rel='stylesheet' id='tp-fontello-css'  href='https://tonsberg.modeltheme.com/wp-content/plugins/essential-gridzip/public/assets/font/fontello/css/fontello.css?ver=2.3.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='sb_instagram_styles-css'  href='https://tonsberg.modeltheme.com/wp-content/plugins/instagram-feed/css/sb-instagram.min.css?ver=1.10.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='sb-font-awesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='style-shortcodes-inc-css'  href='https://tonsberg.modeltheme.com/wp-content/plugins/modeltheme-framework/inc/shortcodes/shortcodes.css?ver=5.0.10' type='text/css' media='all' />
+    <link rel='stylesheet' id='style-mt-mega-menu-css'  href='https://tonsberg.modeltheme.com/wp-content/plugins/modeltheme-framework/css/mt-mega-menu.css?ver=5.0.10' type='text/css' media='all' />
+    <link rel='stylesheet' id='style-select2-css'  href='https://tonsberg.modeltheme.com/wp-content/plugins/modeltheme-framework/css/select2.min.css?ver=5.0.10' type='text/css' media='all' />
+    <link rel='stylesheet' id='style-animations-css'  href='https://tonsberg.modeltheme.com/wp-content/plugins/modeltheme-framework/css/animations.css?ver=5.0.10' type='text/css' media='all' />
+    <link rel='stylesheet' id='rs-plugin-settings-css'  href='https://tonsberg.modeltheme.com/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.4.8' type='text/css' media='all' />
+    <style id='rs-plugin-settings-inline-css' type='text/css'>
+        #rs-demo-id {}
+    </style>
 
     <link rel='stylesheet' id='tonsberg-parent-style-css'  href='{{asset('tonsberg/style.css')}}' type='text/css' media='all' />
-  <link rel='stylesheet' id='cryptocoins-css'  href='{{asset('tonsberg/fonts/cryptocoins.css')}}' type='text/css' media='all' />
+    <link rel='stylesheet' id='font-awesome-css'  href='https://tonsberg.modeltheme.com/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/font-awesome.min.css?ver=5.6' type='text/css' media='all' />
+    <link rel='stylesheet' id='cryptocoins-css'  href='{{asset('tonsberg/fonts/cryptocoins.css')}}' type='text/css' media='all' />
     <link rel='stylesheet' id='tonsberg-responsive-css'  href='{{asset('tonsberg/css/responsive.css')}}' type='text/css' media='all' />
     <link rel='stylesheet' id='tonsberg-media-screens-css'  href='{{asset('tonsberg/css/media-screens.css')}}}' type='text/css' media='all' />
     <link rel='stylesheet' id='owl-carousel2-css'  href='{{asset('tonsberg/css/owl.carousel.min.css')}}' type='text/css' media='all' />
     <link rel='stylesheet' id='animate-css'  href='{{asset('tonsberg/css/animate.css')}}' type='text/css' media='all' />
     <link rel='stylesheet' id='tonsberg-style-css'  href='{{asset('tonsberg/css/styles.css')}}' type='text/css' media='all' />
     <link rel='stylesheet' id='tonsberg-mt-style-css'  href='{{asset('tonsberg-child/style.css')}}' type='text/css' media='all' />
-    <style>
-        #LeftFloatAds{
-            left: 0px;
-            position: fixed;
-            text-align: center;
-            top: 55%;
-            font-size:14px;
-            padding:5px 10px;
-             height:250px;
-            background-color: #ccc;
-        }
-        #RightFloatAds{
-            right: 0px;
-            position: fixed;
-            text-align: center;
-            top: 55%;
-            font-size:14px;
-            padding:5px 10px;
-            height:250px;
-            background-color: #ccc;
-        }
-    </style>
+    <link rel='stylesheet' id='tonsberg-mt-style-css'  href='{{asset('css/gallery.css')}}' type='text/css' media='all' />
+    <link rel='stylesheet' id='tonsberg-mt-style-css'  href='{{asset('css/seamless.css')}}' type='text/css' media='all' />
     <style id='tonsberg-mt-style-inline-css' type='text/css'>
         body .tonsberg_preloader_holder{
             background-color: #ffffff;
@@ -554,23 +588,103 @@
     <link rel='stylesheet' id='swipebox-css'  href='{{asset('tonsberg/css/swipebox.css')}}' type='text/css' media='all' />
     <link rel='stylesheet' id='js-composer-css'  href='{{asset('tonsberg/css/js_composer.css')}}' type='text/css' media='all' />
     <link rel='stylesheet' id='tonsberg-gutenberg-frontend-css'  href='{{asset('tonsberg/css/gutenberg-frontend.css')}}' type='text/css' media='all' />
+    <link rel='stylesheet' id='tonsberg-fonts-css'  href='//fonts.googleapis.com/css?family=Libre+Baskerville%3Aregular%2Citalic%2C700%2Clatin-ext%2Clatin%7CMontserrat%3A200%2C200i%2C300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%2C800%2C800i%2C900%2C900i&#038;ver=1.0.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='js_composer_front-css'  href='https://tonsberg.modeltheme.com/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=5.6' type='text/css' media='all' />
+    <script>if (document.location.protocol != "https:") {document.location = document.URL.replace(/^http:/i, "https:");}</script>
+    <script type='text/javascript' src='https://tonsberg.modeltheme.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='https://tonsberg.modeltheme.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script type='text/javascript' src='https://tonsberg.modeltheme.com/wp-content/plugins/essential-gridzip/public/assets/js/jquery.esgbox.min.js?ver=2.3.1'></script>
+    <script type='text/javascript' src='https://tonsberg.modeltheme.com/wp-content/plugins/essential-gridzip/public/assets/js/jquery.themepunch.tools.min.js?ver=2.3.1'></script>
+    <script type='text/javascript' src='https://tonsberg.modeltheme.com/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=5.4.8'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/tonsberg.modeltheme.com\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+        /* ]]> */
+    </script>
+    <link rel='https://api.w.org/' href='https://tonsberg.modeltheme.com/wp-json/' />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://tonsberg.modeltheme.com/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://tonsberg.modeltheme.com/wp-includes/wlwmanifest.xml" />
+    <meta name="generator" content="WordPress 5.0.10" />
 
+    <link rel="canonical" href="https://tonsberg.modeltheme.com/" />
+    <link rel='shortlink' href='https://tonsberg.modeltheme.com/' />
+    <link rel="alternate" type="application/json+oembed" href="https://tonsberg.modeltheme.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftonsberg.modeltheme.com%2F" />
+    <link rel="alternate" type="text/xml+oembed" href="https://tonsberg.modeltheme.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftonsberg.modeltheme.com%2F&#038;format=xml" />
+    <script type="text/javascript">
+        var ajaxRevslider;
 
+        jQuery(document).ready(function() {
+            // CUSTOM AJAX CONTENT LOADING FUNCTION
+            ajaxRevslider = function(obj) {
 
+                // obj.type : Post Type
+                // obj.id : ID of Content to Load
+                // obj.aspectratio : The Aspect Ratio of the Container / Media
+                // obj.selector : The Container Selector where the Content of Ajax will be injected. It is done via the Essential Grid on Return of Content
 
-    <link rel='stylesheet' id='tp-open-sans-css'  href='https://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%2C700%2C800&#038;ver=5.0.10' type='text/css' media='all' />
-    <link rel='stylesheet' id='tp-raleway-css'  href='https://fonts.googleapis.com/css?family=Raleway%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900&#038;ver=5.0.10' type='text/css' media='all' />
-    <link rel='stylesheet' id='tp-droid-serif-css'  href='https://fonts.googleapis.com/css?family=Droid+Serif%3A400%2C700&#038;ver=5.0.10' type='text/css' media='all' />
-    <link rel='stylesheet' id='tp-barlow-condensed-css'  href='https://fonts.googleapis.com/css?family=Barlow+Condensed%3A100%2C200%2C300%2C400%2C500%2C600%2C700&#038;ver=5.0.10' type='text/css' media='all' />
-    <link rel='stylesheet' id='tp-source-code-pro-css'  href='https://fonts.googleapis.com/css?family=Source+Code+Pro%3A300%2C400%2C500%2C600%2C700&#038;ver=5.0.10' type='text/css' media='all' />
-    <link rel='stylesheet' id='tp-montserrat-css'  href='https://fonts.googleapis.com/css?family=Montserrat%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900&#038;ver=5.0.10' type='text/css' media='all' />
-    <link rel='stylesheet' id='tp-fontello-css'  href='https://tonsberg.modeltheme.com/wp-content/plugins/essential-gridzip/public/assets/font/fontello/css/fontello.css?ver=2.3.1' type='text/css' media='all' />
+                var content = "";
 
+                data = {};
+
+                data.action = 'revslider_ajax_call_front';
+                data.client_action = 'get_slider_html';
+                data.token = 'dac91a9bef';
+                data.type = obj.type;
+                data.id = obj.id;
+                data.aspectratio = obj.aspectratio;
+
+                // SYNC AJAX REQUEST
+                jQuery.ajax({
+                    type:"post",
+                    url:"https://tonsberg.modeltheme.com/wp-admin/admin-ajax.php",
+                    dataType: 'json',
+                    data:data,
+                    async:false,
+                    success: function(ret, textStatus, XMLHttpRequest) {
+                        if(ret.success == true)
+                            content = ret.data;
+                    },
+                    error: function(e) {
+                        console.log(e);
+                    }
+                });
+
+                // FIRST RETURN THE CONTENT WHEN IT IS LOADED !!
+                return content;
+            };
+
+            // CUSTOM AJAX FUNCTION TO REMOVE THE SLIDER
+            var ajaxRemoveRevslider = function(obj) {
+                return jQuery(obj.selector+" .rev_slider").revkill();
+            };
+
+            // EXTEND THE AJAX CONTENT LOADING TYPES WITH TYPE AND FUNCTION
+            var extendessential = setInterval(function() {
+                if (jQuery.fn.tpessential != undefined) {
+                    clearInterval(extendessential);
+                    if(typeof(jQuery.fn.tpessential.defaults) !== 'undefined') {
+                        jQuery.fn.tpessential.defaults.ajaxTypes.push({type:"revslider",func:ajaxRevslider,killfunc:ajaxRemoveRevslider,openAnimationSpeed:0.3});
+                        // type:  Name of the Post to load via Ajax into the Essential Grid Ajax Container
+                        // func: the Function Name which is Called once the Item with the Post Type has been clicked
+                        // killfunc: function to kill in case the Ajax Window going to be removed (before Remove function !
+                        // openAnimationSpeed: how quick the Ajax Content window should be animated (default is 0.3)
+                    }
+                }
+            },30);
+        });
+    </script>
+    <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+    <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+    <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://tonsberg.modeltheme.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><meta name="generator" content="Powered by Slider Revolution 5.4.8 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+    <script type="text/javascript">function setREVStartSize(e){
+            try{ e.c=jQuery(e.c);var i=jQuery(window).width(),t=9999,r=0,n=0,l=0,f=0,s=0,h=0;
+                if(e.responsiveLevels&&(jQuery.each(e.responsiveLevels,function(e,f){f>i&&(t=r=f,l=e),i>f&&f>r&&(r=f,n=e)}),t>r&&(l=n)),f=e.gridheight[l]||e.gridheight[0]||e.gridheight,s=e.gridwidth[l]||e.gridwidth[0]||e.gridwidth,h=i/s,h=h>1?1:h,f=Math.round(h*f),"fullscreen"==e.sliderLayout){var u=(e.c.width(),jQuery(window).height());if(void 0!=e.fullScreenOffsetContainer){var c=e.fullScreenOffsetContainer.split(",");if (c) jQuery.each(c,function(e,i){u=jQuery(i).length>0?u-jQuery(i).outerHeight(!0):u}),e.fullScreenOffset.split("%").length>1&&void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0?u-=jQuery(window).height()*parseInt(e.fullScreenOffset,0)/100:void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0&&(u-=parseInt(e.fullScreenOffset,0))}f=u}else void 0!=e.minHeight&&f<e.minHeight&&(f=e.minHeight);e.c.closest(".rev_slider_wrapper").css({height:f})
+            }catch(d){console.log("Failure at Presize of Slider:"+d)}
+        };</script>
     <style type="text/css" title="dynamic-css" class="options-output">.fixed-sidebar-menu{background-color:rgba(34,34,34,0.95);}#navbar .menu-item > a,
                                                                                                                                 .navbar-nav .search_products a,
                                                                                                                                 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus,
                                                                                                                                 .navbar-default .navbar-nav > li > a{color:#ffffff;}#navbar .menu-item.selected > a, #navbar .menu-item:hover > a, .navstyle-v1.header3 #navbar .menu > .menu-item:hover > a{color:#ff2222;}#navbar .sub-menu, .navbar ul li ul.sub-menu{background-color:#ff2222;}#navbar ul.sub-menu li a{color:#ffffff;}#navbar ul.sub-menu li a:hover{background-color:transparent;}body #navbar ul.sub-menu li a:hover, body #navbar ul.sub-menu li:hover a{color:#ffffff;}.navbar-default{background-color:#252525;}.fixed-sidebar-menu{background-color:#ffffff;}footer .footer-top{background-color:#fafafa;}footer .footer-top h1.widget-title, footer .footer-top h3.widget-title, footer .footer-top .widget-title{color:#222222;}.footer-row-1{padding-top:95px;padding-bottom:60px;}.footer-row-1{margin-top:0;margin-bottom:0;}.footer-row-1{border-top:0px solid #515b5e;border-bottom:0px solid #515b5e;border-left:0px solid #515b5e;border-right:0px solid #515b5e;}.footer-row-3{padding-top:0;padding-bottom:90px;}.footer-row-3{margin-top:0;margin-bottom:0;}.footer-row-3{border-top:0px solid #515b5e;border-bottom:0px solid #515b5e;border-left:0px solid #515b5e;border-right:0px solid #515b5e;}footer .footer h1.widget-title, footer .footer h3.widget-title, footer .footer .widget-title, .copyright_left, .copyright_right{color:#929292;}</style><style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1542725956068{margin-bottom: 40px !important;padding-top: 0px !important;}.vc_custom_1541084976568{margin-top: 25px !important;margin-bottom: 0px !important;}.vc_custom_1541756931124{margin-top: 0px !important;margin-bottom: 50px !important;}.vc_custom_1541757041988{margin-top: 25px !important;margin-bottom: 80px !important;}.vc_custom_1541757057075{margin-bottom: 40px !important;}.vc_custom_1543846840525{margin-top: 25px !important;margin-bottom: 45px !important;}.vc_custom_1543830632519{margin-top: 15px !important;margin-bottom: 35px !important;}.vc_custom_1542894196145{margin-bottom: 5px !important;margin-left: -3px !important;}.vc_custom_1542894204675{margin-bottom: 30px !important;}.vc_custom_1542894213740{margin-bottom: 5px !important;margin-left: -3px !important;}.vc_custom_1542894220064{margin-bottom: 50px !important;}.vc_custom_1542895891650{margin-bottom: 5px !important;margin-left: -3px !important;}.vc_custom_1542895897638{margin-bottom: 30px !important;}.vc_custom_1542895921467{margin-bottom: 5px !important;margin-left: -3px !important;}.vc_custom_1542895939329{margin-bottom: 30px !important;}.vc_custom_1542895969592{margin-bottom: 5px !important;margin-left: -3px !important;}.vc_custom_1542895977230{margin-bottom: 30px !important;}</style><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
-{{--<link rel='stylesheet' href='{{asset('css/app.css')}}' type='text/css'/>--}}
 
 <body data-rsssl=1 class="home page-template-default page page-id-15 widgets_v2 active-modeltheme-framework active-redux-framework navstyle-v1        header3   wpb-js-composer js-comp-ver-5.6 vc_responsive">
 
@@ -620,6 +734,8 @@
 
             <!-- BOTTOM BAR -->
             <div class="container">
+
+
                 <div class="row logo-infos-row add_place_banner">
 
                     <!-- LOGO HOLDER -->
@@ -645,12 +761,7 @@
                         <div class="add-banner-header">
                             <a href="@if($header_advert) {{$header_advert->link}} @else {{'#'}} @endif" target="_blank">
                                 @if($header_advert)
-
-                                    @if(in_array($header_advert->file_ext,['png','jpg','jpeg']))
-                                        <img src="{{asset('upload/'.$header_advert->file_hash)}}" width="728px" height="90px" alt="{{$header_advert->title}}" />
-                                    @else
-                                        <video autoplay loop 	muted width="728" height="90"> <source src="{{asset('upload/'.$header_advert->file_hash)}}" ></video>
-                                    @endif
+                                    <img src="{{asset('upload/'.$header_advert->file_hash)}}" width="728px" height="90px" alt="{{$header_advert->title}}" />
 
                                 @else
                                     <img src="{{asset('images/adplace-header.jpg')}}" alt="" />
@@ -661,9 +772,10 @@
 
 
                         <ul class="social-links social-links-labels text-right">
-
+                            <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="https://web.whatsapp.com/"><i class="fa fa-whatsapp"></i></a></li>
+                            <li><a href="https://dribbble.com/"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="https://telegram.org/"><i class="fa fa-telegram"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -678,51 +790,39 @@
             <div class="container">
                 <div class="row modeltheme-main-head-row">
                     <!-- NAV MENU -->
-                    {{--<div class="col-md-1 right-side-social-actions">--}}
-                        {{--<!-- ACTIONS BUTTONS GROUP -->--}}
-                        {{--<div class="actions-group">--}}
-                            {{--<!-- MT BURGER -->--}}
-                            {{--<div id="mt-nav-burger">--}}
-                                {{--<span></span>--}}
-                                {{--<span></span>--}}
-                                {{--<span></span>--}}
-                                {{--<span></span>--}}
-                                {{--<span></span>--}}
-                                {{--<span></span>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-
-
-                    <div id="navbar" class="navbar-collapse collapse col-md-8">
-                        {{--<ul class="menu nav navbar-nav nav-effect nav-menu">/--}}
-                            {{--<li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-reklama current-menu-ancestor current-menu-parent menu-item-has-children menu-item-7">--}}
-                                {{--<a href="/">Реклама</a>--}}
-                            {{--</li>--}}
-                            {{--<li id="menu-item-323" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-323">--}}
-                                {{--<a href="{{route('about')}}">Компания</a>--}}
-                            {{--</li>--}}
-
-                        {{--</ul>--}}
+                    <div class="col-md-1 right-side-social-actions">
+                        <!-- ACTIONS BUTTONS GROUP -->
+                        <div class="actions-group">
+                            <!-- MT BURGER -->
+                            <div id="mt-nav-burger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
                     </div>
 
-                    <div id="navbar" class="col-md-4 navbar-collapse collapse text-right">
 
+                    <div id="navbar" class="navbar-collapse collapse col-md-10">
                         <ul class="menu nav navbar-nav nav-effect nav-menu">
-                            <li id="menu-item" class="menu-item menu-item-type-custom menu-item-object-custom">
-                                <a href="{{route('contact-form')}}">Обратная связь <i class="fa fa-send"></i> </a>
+                            <li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-reklama current-menu-ancestor current-menu-parent menu-item-has-children menu-item-7">
+                                <a href="/">Реклама</a>
                             </li>
-                        <li id="menu-item" class="menu-item menu-item-type-custom menu-item-object-custom">
-                            <a href="{{asset('files/price_list.pdf')}}" download>Прайс лист  <i class="fa fa-download"></i> </a>
-                        </li>
+                            <li id="menu-item-323" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-323">
+                                <a href="{{route('about')}}">Компания</a>
+                            </li>
+
                         </ul>
                     </div>
 
-                    {{--<div class="header-nav-actions col-md-2 text-right">--}}
-                        {{--<a href="#" class="mt-search-icon">--}}
-                            {{--<i class="fa fa-search" aria-hidden="true"></i>--}}
-                        {{--</a>--}}
-                    {{--</div>--}}
+                    <div class="header-nav-actions col-md-1 text-right">
+                        <a href="#" class="mt-search-icon">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </a>
+                    </div>
 
                 </div>
             </div>
@@ -733,28 +833,23 @@
 
     <!-- Page content -->
     <div id="primary" class="no-padding content-area no-sidebar">
-
-
         <div class="container">
+            <div class="row">
                 <main id="main" class="col-md-12 site-main main-content">
 
 
                     <article id="post-15" class="post-15 page type-page status-publish hentry">
 
                         <div class="entry-content mt-lg-3" >
-                                    @yield('content')
+                            @yield('content')
 
                         </div><!-- .entry-content -->
 
                     </article><!-- #post-## -->
 
                 </main>
+            </div>
         </div>
-        <div id="RightFloatAds">
-            <p class="text-right small"><i class="fa fa-times"></i></p>
-            <p class="small">Advert <br/> from <br/> GoogleAds</p> </div>
-        <div id="LeftFloatAds"> <p class="text-right small"><i class="fa fa-times"></i></p>
-            <p class="small">Advert <br/> from <br/> GoogleAds</p> </div>
     </div>
 
     <!-- loader -->
@@ -788,18 +883,11 @@
                                             <a href="@if($footer_advert) {{$footer_advert->link}} @else {{'#'}} @endif" target="_blank">
 
                                                 @if($footer_advert)
-
-                                                    @if(in_array($footer_advert->file_ext,['png','jpg','jpeg']))
-                                                        <img src="{{asset('upload/'.$footer_advert->file_hash)}}" width="728px" height="90px" alt="{{$footer_advert->title}}" />
-
-                                                    @else
-                                                        <video autoplay width="728" height="90"> <source src="{{asset('upload/'.$footer_advert->file_hash)}}" ></video>
-                                                    @endif
+                                                    <img src="{{asset('upload/'.$footer_advert->file_hash)}}" width="728px" height="90px" alt="{{$footer_advert->title}}" />
 
                                                 @else
                                                     <img src="{{asset('images/adplace-header.jpg')}}" alt="" />
                                                 @endif;
-
 
 
                                             </a>
@@ -816,7 +904,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <p class="copyright text-center">
-                                <span class="copyright_left">Qazaqstan-ADS. Все права защищены</span><span class="copyright_right">2020</span>                                                            </p>
+                                <span class="copyright_left">Qazaqstan-ADS. All Rights Reserved</span><span class="copyright_right">2020</span>                                                            </p>
                         </div>
                     </div>
                 </div>
@@ -826,13 +914,44 @@
 </div>
 
 
+<link rel='stylesheet' id='animate-css-css'  href='https://tonsberg.modeltheme.com/wp-content/plugins/js_composer/assets/lib/bower/animate-css/animate.min.css?ver=5.6' type='text/css' media='all' />
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var wpcf7 = {"apiSettings":{"root":"https:\/\/tonsberg.modeltheme.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+    /* ]]> */
+</script>
+<script type='text/javascript' src='https://tonsberg.modeltheme.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1'></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var sb_instagram_js_options = {"sb_instagram_at":"","font_method":"svg"};
+    /* ]]> */
+</script>
+<script type='text/javascript' src='https://tonsberg.modeltheme.com/wp-content/plugins/instagram-feed/js/sb-instagram.min.js?ver=1.10.2'></script>
+<script type='text/javascript' src='https://tonsberg.modeltheme.com/wp-content/plugins/modeltheme-framework/js/classie.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://tonsberg.modeltheme.com/wp-content/plugins/modeltheme-framework/js/mt-plugins.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://tonsberg.modeltheme.com/wp-content/plugins/modeltheme-framework/js/select2.min.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://tonsberg.modeltheme.com/wp-content/plugins/modeltheme-framework/js/modeltheme-custom.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://tonsberg.modeltheme.com/wp-content/plugins/modeltheme-framework/js/mt-video/jquery.magnific-popup.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://tonsberg.modeltheme.com/wp-content/plugins/modeltheme-framework/js/mt-coundown-version2/flipclock.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://tonsberg.modeltheme.com/wp-content/plugins/modeltheme-framework/js/map-pins.js?ver=1.0.0'></script>
 
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_a73f0699c4ef6d41ce82babb8321ee94","fragment_name":"wc_fragments_a73f0699c4ef6d41ce82babb8321ee94"};
+    /* ]]> */
+</script>
+<script type='text/javascript'>
+    jQuery( 'body' ).bind( 'wc_fragments_refreshed', function() {
+        jQuery( 'body' ).trigger( 'jetpack-lazy-images-load' );
+    } );
 
+</script>
 {{--<script type='text/javascript' src='{{asset('js/app.js')}}'></script>--}}
-<script type='text/javascript' src='https://tonsberg.modeltheme.com/wp-includes/js/jquery/jquery.js'></script>
 <script type='text/javascript' src='{{asset('js/gallery.js')}}'></script>
 <script type='text/javascript' src='{{asset('js/seamless.js')}}'></script>
 <script type='text/javascript' src='{{asset('tonsberg/js/bootstrap.min.js')}}'></script>
+<script type='text/javascript' src='https://tonsberg.modeltheme.com/wp-includes/js/jquery/jquery.form.min.js?ver=4.2.1'></script>
+
 
 <script type='text/javascript' src='{{asset('tonsberg/js/modernizr.custom.js')}}'></script>
 
@@ -852,6 +971,7 @@
 <script type='text/javascript' src='{{asset('tonsberg/js/jquery.sticky-kit.min.js')}}'></script>
 {{--<script type='text/javascript' src='{{asset('tonsberg/js/loaders.js')}}'></script>--}}
 <script type='text/javascript' src='{{asset('tonsberg/js/swipebox.js')}}'></script>
+<script type='text/javascript' src='{{asset('tonsberg/js/owl.carousel.min.js')}}'></script>
 <script type='text/javascript' src='{{asset('tonsberg/js/tonsberg-custom.js')}}'></script>
 
 </body>

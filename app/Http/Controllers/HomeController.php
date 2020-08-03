@@ -26,6 +26,13 @@ class HomeController extends Controller
     }
 
     public function about(){
-        return view('about');
+        $header_advert=Adverts::where(['advert_types_id'=>AdvertTypes::HEADER_ADVERT])->whereNull('deleted_at')->first();
+        $footer_advert=Adverts::where(['advert_types_id'=>AdvertTypes::FOOTER_ADVERT])->whereNull('deleted_at')->first();
+        return view('about',compact('header_advert','footer_advert'));
+    }
+    public function contactForm(){
+        $header_advert=Adverts::where(['advert_types_id'=>AdvertTypes::HEADER_ADVERT])->whereNull('deleted_at')->first();
+        $footer_advert=Adverts::where(['advert_types_id'=>AdvertTypes::FOOTER_ADVERT])->whereNull('deleted_at')->first();
+        return view('contact_form',compact('header_advert','footer_advert'));
     }
 }
