@@ -22,7 +22,7 @@
             responsive: true,
             searching:false,
             lengthChange:false,
-            pageLength: 50,
+            pageLength: 10,
             processing: true,
             serverSide: true,
             language:{

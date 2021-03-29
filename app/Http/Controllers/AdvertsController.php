@@ -146,17 +146,17 @@ class AdvertsController extends Controller
     public function ajax(Request $request)
     {
 
-
         $adverts = Adverts::orderBy('id', 'DESC');
         $adverts=$adverts->whereNull('deleted_at');
         $adverts=$adverts->with(['type']);
         $adverts = $adverts->paginate($request->get('length'), ['adverts.*'], 'page', $request->get('draw'));
 
-
+dd($adverts->items());
         return response()->json([
-            'draw' =>  $request->get('draw'),
-            'page' => $adverts->lastPage(),
+            'page' =>  $adverts->currentPage(),
+            'pages' => $adverts->lastPage(),
             'length' => (int)$adverts->perPage(),
+            'start' => (int)$adverts->perPage(),
             'recordsTotal' => $adverts->total(),
             'recordsFiltered' => $adverts->total(),
             'data' => $adverts->items()

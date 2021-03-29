@@ -75,6 +75,8 @@ class Adverts extends Model
     public static function getMainBlockdvertsCount(){
         return Adverts::where('advert_types_id',AdvertTypes::MAIN_BLOCK_ADVERT)->count();
     }
-
+    public function getList(){
+        return [];
+    }
 
 }
